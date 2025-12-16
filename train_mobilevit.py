@@ -21,7 +21,7 @@ Example:
     --pretrained_weights /path/to/mobilevit_s.pt \
     --num_classes 7 \
     --epochs 100 \
-    --patience 10 \
+    --patience 5 \
     --batch_size 16 \
     --lr 1e-4 \
     --output_dir outputs_mobilevit \
@@ -252,7 +252,7 @@ def parse_args() -> argparse.Namespace:
                         help="Dataloader workers. 0 means auto heuristic.")
     parser.add_argument("--output_dir", type=str, default="outputs_mobilevit",
                         help="Directory to save weights/logs.")
-    parser.add_argument("--patience", type=int, default=10,
+    parser.add_argument("--patience", type=int, default=5,
                         help="Early stopping patience based on validation loss.")
     parser.add_argument("--save_best_acc", action="store_true",
                         help="If set, also save the best model by validation accuracy.")
